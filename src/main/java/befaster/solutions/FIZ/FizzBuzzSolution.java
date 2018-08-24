@@ -20,6 +20,11 @@ public class FizzBuzzSolution {
             words.add("buzz");
         }
 
+        if (number == 11)
+        {
+            words.add("deluxe");
+        }
+
         if (words.size() > 0)
         {
             return String.join(" ", words);
