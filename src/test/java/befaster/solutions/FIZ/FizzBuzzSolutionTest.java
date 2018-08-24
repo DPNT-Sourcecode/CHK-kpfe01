@@ -111,8 +111,8 @@ public class FizzBuzzSolutionTest
 	}
 
 	@Test
-	public void oneHundredAndElevenReturnsDeluxe()
+	public void oneHundredAndElevenReturnsFizzDeluxe()
 	{
-		assertEquals("deluxe", solution.fizzBuzz(111));
+		assertEquals("fizz deluxe", solution.fizzBuzz(111));
 	}
 }

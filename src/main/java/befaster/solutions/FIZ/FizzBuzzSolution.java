@@ -3,10 +3,10 @@ package befaster.solutions.FIZ;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FizzBuzzSolution {
-
-    public String fizzBuzz(Integer number) {
-
+public class FizzBuzzSolution
+{
+    public String fizzBuzz(Integer number)
+    {
         String numberString = "" + number;
         List<String> words = new ArrayList<>();
 
@@ -20,7 +20,7 @@ public class FizzBuzzSolution {
             words.add("buzz");
         }
 
-        if (number % 11 == 0)
+        if (isDeluxe(numberString))
         {
             words.add("deluxe");
         }
@@ -33,5 +33,27 @@ public class FizzBuzzSolution {
         {
             return numberString;
         }
+    }
+
+    private boolean isDeluxe(String numberString)
+    {
+        char[] numberCharacters = numberString.toCharArray();
+
+        if (numberCharacters.length < 2)
+        {
+            return false;
+        }
+
+        char firstCharacter = numberCharacters[0];
+
+        for (char character: numberCharacters)
+        {
+            if (character != firstCharacter)
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
