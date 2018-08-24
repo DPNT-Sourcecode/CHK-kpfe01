@@ -22,6 +22,11 @@ public class FizzBuzzSolution
 
         if (isDeluxe(numberString))
         {
+            if (number % 2 == 1)
+            {
+                words.add("fake");
+            }
+
             words.add("deluxe");
         }
 
