@@ -69,9 +69,21 @@ public class FizzBuzzSolutionTest
 	}
 
 	@Test
+	public void twentyTwoReturnsDeluxe()
+	{
+		assertEquals("deluxe", solution.fizzBuzz(22));
+	}
+
+	@Test
 	public void thirtyReturnsFizzBuzz()
 	{
 		assertEquals("fizz buzz", solution.fizzBuzz(30));
+	}
+
+	@Test
+	public void thirtyThreeReturnsFizzDeluxe()
+	{
+		assertEquals("fizz deluxe", solution.fizzBuzz(33));
 	}
 
 	@Test
@@ -90,5 +102,11 @@ public class FizzBuzzSolutionTest
 	public void fiftyThreeReturnsFizzBuzz()
 	{
 		assertEquals("fizz buzz", solution.fizzBuzz(53));
+	}
+
+	@Test
+	public void fiftyFiveReturnsBuzzDeluxe()
+	{
+		assertEquals("buzz deluxe", solution.fizzBuzz(55));
 	}
 }

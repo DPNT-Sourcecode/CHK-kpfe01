@@ -20,7 +20,7 @@ public class FizzBuzzSolution {
             words.add("buzz");
         }
 
-        if (number == 11)
+        if (number % 11 == 0)
         {
             words.add("deluxe");
         }
