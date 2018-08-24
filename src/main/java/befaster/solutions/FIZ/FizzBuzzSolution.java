@@ -1,24 +1,28 @@
 package befaster.solutions.FIZ;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
 
         String numberString = "" + number;
-        boolean containsThree = numberString.contains("3");
-        boolean containsFive = numberString.contains("5");
+        List<String> words = new ArrayList<>();
 
-        if (number % 15 == 0 || (containsThree && containsFive))
+        if (number % 3 == 0 || numberString.contains("3"))
         {
-            return "fizz buzz";
+            words.add("fizz");
         }
-        else if (number % 3 == 0 || containsThree)
+
+        if (number % 5 == 0 || numberString.contains("5"))
         {
-            return "fizz";
+            words.add("buzz");
         }
-        else if (number % 5 == 0 || containsFive)
+
+        if (words.size() > 0)
         {
-            return "buzz";
+            return String.join(" ", words);
         }
         else
         {
