@@ -109,4 +109,10 @@ public class FizzBuzzSolutionTest
 	{
 		assertEquals("buzz deluxe", solution.fizzBuzz(55));
 	}
+
+	@Test
+	public void oneHundredAndElevenReturnsDeluxe()
+	{
+		assertEquals("deluxe", solution.fizzBuzz(111));
+	}
 }
