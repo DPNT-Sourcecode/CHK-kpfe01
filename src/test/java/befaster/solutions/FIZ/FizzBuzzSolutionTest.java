@@ -1,6 +1,7 @@
 package befaster.solutions.FIZ;
 
 import org.junit.Test;
+import org.junit.experimental.theories.suppliers.TestedOn;
 
 import static org.junit.Assert.assertEquals;
 
@@ -36,5 +37,23 @@ public class FizzBuzzSolutionTest
 	public void fiveReturnsBuzz()
 	{
 		assertEquals("buzz", solution.fizzBuzz(5));
+	}
+
+	@Test
+	public void sixReturnsFizz()
+	{
+		assertEquals("fizz", solution.fizzBuzz(6));
+	}
+
+	@Test
+	public void tenReturnsBuzz()
+	{
+		assertEquals("buzz", solution.fizzBuzz(10));
+	}
+
+	@Test
+	public void fifteenReturnsFizzBuzz()
+	{
+		assertEquals("fizz buzz", solution.fizzBuzz(15));
 	}
 }

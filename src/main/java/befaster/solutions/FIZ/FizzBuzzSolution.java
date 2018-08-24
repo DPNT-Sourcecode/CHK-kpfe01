@@ -4,7 +4,11 @@ public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
 
-        if (number % 3 == 0)
+        if (number % 15 == 0)
+        {
+            return "fizz buzz";
+        }
+        else if (number % 3 == 0)
         {
             return "fizz";
         }
