@@ -19,4 +19,22 @@ public class FizzBuzzSolutionTest
 	{
 		assertEquals("2", solution.fizzBuzz(2));
 	}
+
+	@Test
+	public void threeReturnsFizz()
+	{
+		assertEquals("fizz", solution.fizzBuzz(3));
+	}
+
+	@Test
+	public void fourReturnsFour()
+	{
+		assertEquals("4", solution.fizzBuzz(4));
+	}
+
+	@Test
+	public void fiveReturnsBuzz()
+	{
+		assertEquals("buzz", solution.fizzBuzz(5));
+	}
 }
