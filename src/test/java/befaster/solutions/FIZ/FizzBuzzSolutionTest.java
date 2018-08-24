@@ -56,4 +56,10 @@ public class FizzBuzzSolutionTest
 	{
 		assertEquals("fizz buzz", solution.fizzBuzz(15));
 	}
+
+	@Test
+	public void thirtyReturnsFizzBuzz()
+	{
+		assertEquals("fizz buzz", solution.fizzBuzz(30));
+	}
 }
