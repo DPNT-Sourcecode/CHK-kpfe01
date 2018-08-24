@@ -20,7 +20,7 @@ public class FizzBuzzSolution
             words.add("buzz");
         }
 
-        if (isDeluxe(numberString))
+        if (isDeluxe(number))
         {
             if (number % 2 == 1)
             {
@@ -40,25 +40,20 @@ public class FizzBuzzSolution
         }
     }
 
-    private boolean isDeluxe(String numberString)
+    private boolean isDeluxe(int number)
     {
-        char[] numberCharacters = numberString.toCharArray();
+        String numberString = "" + number;
 
-        if (numberCharacters.length < 2)
+        if (number % 3 == 0 && numberString.contains("3"))
         {
-            return false;
+            return true;
         }
 
-        char firstCharacter = numberCharacters[0];
-
-        for (char character: numberCharacters)
+        if (number % 5 == 0 || numberString.contains("5"))
         {
-            if (character != firstCharacter)
-            {
-                return false;
-            }
+            return true;
         }
 
-        return true;
+        return false;
     }
 }

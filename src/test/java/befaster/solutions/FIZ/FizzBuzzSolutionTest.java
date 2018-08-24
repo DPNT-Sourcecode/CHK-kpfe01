@@ -21,7 +21,7 @@ public class FizzBuzzSolutionTest
 	}
 
 	@Test
-	public void threeReturnsFizz()
+	public void threeReturnsFizzDeluxe()
 	{
 		assertEquals("fizz", solution.fizzBuzz(3));
 	}
@@ -33,9 +33,9 @@ public class FizzBuzzSolutionTest
 	}
 
 	@Test
-	public void fiveReturnsBuzz()
+	public void fiveReturnsBuzzDeluxe()
 	{
-		assertEquals("buzz", solution.fizzBuzz(5));
+		assertEquals("buzz fake deluxe", solution.fizzBuzz(5));
 	}
 
 	@Test
@@ -51,9 +51,9 @@ public class FizzBuzzSolutionTest
 	}
 
 	@Test
-	public void elevenReturnsDeluxe()
+	public void elevenReturnsEleven()
 	{
-		assertEquals("fake deluxe", solution.fizzBuzz(11));
+		assertEquals("11", solution.fizzBuzz(11));
 	}
 
 	@Test
@@ -63,25 +63,25 @@ public class FizzBuzzSolutionTest
 	}
 
 	@Test
-	public void fifteenReturnsFizzBuzz()
+	public void fifteenReturnsFizzBuzzFakeDeluxe()
 	{
-		assertEquals("fizz buzz", solution.fizzBuzz(15));
+		assertEquals("fizz buzz fake deluxe", solution.fizzBuzz(15));
 	}
 
 	@Test
-	public void twentyTwoReturnsDeluxe()
+	public void twentyTwoReturnsTwentyTwo()
 	{
-		assertEquals("deluxe", solution.fizzBuzz(22));
+		assertEquals("22", solution.fizzBuzz(22));
 	}
 
 	@Test
 	public void thirtyReturnsFizzBuzz()
 	{
-		assertEquals("fizz buzz", solution.fizzBuzz(30));
+		assertEquals("fizz buzz deluxe", solution.fizzBuzz(30));
 	}
 
 	@Test
-	public void thirtyThreeReturnsFizzDeluxe()
+	public void thirtyThreeReturnsFizzFakeDeluxe()
 	{
 		assertEquals("fizz fake deluxe", solution.fizzBuzz(33));
 	}
@@ -105,14 +105,8 @@ public class FizzBuzzSolutionTest
 	}
 
 	@Test
-	public void fiftyFiveReturnsBuzzDeluxe()
+	public void fiftyFiveReturnsBuzzFakeDeluxe()
 	{
 		assertEquals("buzz fake deluxe", solution.fizzBuzz(55));
-	}
-
-	@Test
-	public void oneHundredAndElevenReturnsFizzDeluxe()
-	{
-		assertEquals("fizz fake deluxe", solution.fizzBuzz(111));
 	}
 }
