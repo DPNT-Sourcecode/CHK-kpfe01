@@ -13,4 +13,10 @@ public class FizzBuzzSolutionTest
 	{
 		assertEquals("1", solution.fizzBuzz(1));
 	}
+
+	@Test
+	public void twoReturnsTwo()
+	{
+		assertEquals("2", solution.fizzBuzz(2));
+	}
 }
