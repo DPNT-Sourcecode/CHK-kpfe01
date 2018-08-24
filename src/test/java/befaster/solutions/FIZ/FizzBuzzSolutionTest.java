@@ -21,9 +21,9 @@ public class FizzBuzzSolutionTest
 	}
 
 	@Test
-	public void threeReturnsFizzDeluxe()
+	public void threeReturnsFizzFakeDeluxe()
 	{
-		assertEquals("fizz", solution.fizzBuzz(3));
+		assertEquals("fizz fake deluxe", solution.fizzBuzz(3));
 	}
 
 	@Test
@@ -33,7 +33,7 @@ public class FizzBuzzSolutionTest
 	}
 
 	@Test
-	public void fiveReturnsBuzzDeluxe()
+	public void fiveReturnsBuzzFakeDeluxe()
 	{
 		assertEquals("buzz fake deluxe", solution.fizzBuzz(5));
 	}

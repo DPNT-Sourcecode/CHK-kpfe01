@@ -49,7 +49,7 @@ public class FizzBuzzSolution
             return true;
         }
 
-        if (number % 5 == 0 || numberString.contains("5"))
+        if (number % 5 == 0 && numberString.contains("5"))
         {
             return true;
         }
