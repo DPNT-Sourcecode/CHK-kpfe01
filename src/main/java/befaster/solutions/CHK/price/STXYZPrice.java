@@ -9,11 +9,17 @@ public class STXYZPrice implements Price
 	{
 		int price = 0;
 
-		price += itemCounts.get('S') * 20;
-		price += itemCounts.get('T') * 20;
-		price += itemCounts.get('X') * 17;
-		price += itemCounts.get('Y') * 20;
-		price += itemCounts.get('Z') * 21;
+		int sCount = itemCounts.get('S');
+		int tCount = itemCounts.get('T');
+		int xCount = itemCounts.get('X');
+		int yCount = itemCounts.get('Y');
+		int zCount = itemCounts.get('Z');
+
+		price += sCount * 20;
+		price += tCount * 20;
+		price += xCount * 17;
+		price += yCount * 20;
+		price += zCount * 21;
 
 		return price;
 	}
