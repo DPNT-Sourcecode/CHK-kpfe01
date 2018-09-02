@@ -11,11 +11,17 @@ public class CheckoutSolution
 {
     private Map<String, Integer> prices = new HashMap<>();
 
+    private Map<String, Integer> specialOffers = new HashMap<>();
+
+    public CheckoutSolution()
     {
         prices.put("A", 50);
         prices.put("B", 30);
         prices.put("C", 20);
         prices.put("D", 15);
+
+        specialOffers.put("3A", 130);
+        specialOffers.put("2B", 45);
     }
 
     public Integer checkout(String skus)
@@ -25,11 +31,18 @@ public class CheckoutSolution
 
         for (String item: items)
         {
-            String sku = item.substring(item.length() - 1);
-            int itemPrice = prices.get(sku);
-            int itemCount = getItemCount(item);
+            if (specialOffers.containsKey(item))
+            {
+                totalPrice += specialOffers.get(item);
+            }
+            else
+            {
+                String sku = item.substring(item.length() - 1);
+                int itemPrice = prices.get(sku);
+                int itemCount = getItemCount(item);
 
-            totalPrice += itemPrice * itemCount;
+                totalPrice += itemPrice * itemCount;
+            }
         }
 
         return  totalPrice;
