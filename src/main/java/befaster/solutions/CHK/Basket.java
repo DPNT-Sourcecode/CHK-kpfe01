@@ -26,6 +26,8 @@ public class Basket
 
 	public int total()
 	{
+		oneFreeBForTwoEs();
+
 		totalPrice += (aCount / 3) * 130;
 		totalPrice += (aCount % 3) * 50;
 
@@ -37,5 +39,12 @@ public class Basket
 		totalPrice += eCount * 40;
 
 		return totalPrice;
+	}
+
+	private void oneFreeBForTwoEs()
+	{
+		bCount -= (eCount / 2);
+
+		bCount = Math.max(0, bCount);
 	}
 }
