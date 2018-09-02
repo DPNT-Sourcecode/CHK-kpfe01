@@ -17,10 +17,8 @@ public class Basket
 	public int total()
 	{
 		oneFreeBForTwoEs();
-		twoBsCosts45();
 		threeFsForPriceOfTwo();
 
-		this.totalPrice += itemCounts.get('B') * 30;
 		this.totalPrice += itemCounts.get('C') * 20;
 		this.totalPrice += itemCounts.get('D') * 15;
 		this.totalPrice += itemCounts.get('E') * 40;
@@ -34,12 +32,6 @@ public class Basket
 		int newBCount = Math.max(0, itemCounts.get('B') - (itemCounts.get('E') / 2));
 
 		itemCounts.put('B', newBCount);
-	}
-
-	private void twoBsCosts45()
-	{
-		totalPrice += (itemCounts.get('B') / 2) * 45;
-		itemCounts.put('B', itemCounts.get('B') % 2);
 	}
 
 	private void threeFsForPriceOfTwo()

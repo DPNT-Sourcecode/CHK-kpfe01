@@ -30,8 +30,10 @@ public class CheckoutSolution
         int totalPrice = 0;
 
         totalPrice += new APrice().getPrice(itemCounts);
+        totalPrice += new Basket(itemCounts, totalPrice).total();
+        totalPrice += new BPrice().getPrice(itemCounts);
 
-        return new Basket(itemCounts, totalPrice).total();
+        return totalPrice;
     }
 
     private boolean isValid(String skus)
