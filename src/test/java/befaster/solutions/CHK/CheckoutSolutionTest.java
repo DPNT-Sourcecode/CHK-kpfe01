@@ -247,4 +247,16 @@ public class CheckoutSolutionTest
 	{
 		assertEquals(20, solution.checkout("T").intValue());
 	}
+
+	@Test
+	public void UCosts40()
+	{
+		assertEquals(40, solution.checkout("U").intValue());
+	}
+
+	@Test
+	public void fourUsCost120()
+	{
+		assertEquals(120, solution.checkout("UUUU").intValue());
+	}
 }
