@@ -8,7 +8,7 @@ public class UPrice implements Price
 	public int getPrice(Map<Character, Integer> itemCounts)
 	{
 		int oldUCount = itemCounts.get('U');
-		int newUCount = oldUCount - (oldUCount / 3);
+		int newUCount = oldUCount - (oldUCount / 4);
 
 		return newUCount * 40;
 	}
