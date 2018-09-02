@@ -16,6 +16,16 @@ public class CheckoutSolution
             totalPrice += 30;
         }
 
+        if (skus.contains("C"))
+        {
+            totalPrice += 20;
+        }
+
+        if (skus.contains("D"))
+        {
+            totalPrice += 15;
+        }
+
         return  totalPrice;
     }
 }
