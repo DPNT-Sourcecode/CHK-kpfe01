@@ -145,4 +145,16 @@ public class CheckoutSolutionTest
 	{
 		assertEquals(80, solution.checkout("HHHHHHHHHH").intValue());
 	}
+
+	@Test
+	public void iCosts35()
+	{
+		assertEquals(35, solution.checkout("I").intValue());
+	}
+
+	@Test
+	public void jCosts60()
+	{
+		assertEquals(60, solution.checkout("J").intValue());
+	}
 }
