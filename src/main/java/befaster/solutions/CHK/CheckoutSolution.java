@@ -8,6 +8,7 @@ public class CheckoutSolution
         int bCount = 0;
         int cCount = 0;
         int dCount = 0;
+        int eCount = 0;
         char[] items = skus.toCharArray();
 
         for (char item: items)
@@ -34,22 +35,6 @@ public class CheckoutSolution
             }
         }
 
-        return getTotal(aCount, bCount, cCount, dCount);
-    }
-
-    private int getTotal(int aCount, int bCount, int cCount, int dCount)
-    {
-        int totalPrice = 0;
-
-        totalPrice += (aCount / 3) * 130;
-        totalPrice += (aCount % 3) * 50;
-
-        totalPrice += (bCount / 2) * 45;
-        totalPrice += (bCount % 2) * 30;
-
-        totalPrice += cCount * 20;
-        totalPrice += dCount * 15;
-
-        return totalPrice;
+        return new Basket(aCount, bCount, cCount, dCount, eCount).total();
     }
 }
