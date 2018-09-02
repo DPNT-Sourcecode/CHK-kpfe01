@@ -239,7 +239,7 @@ public class CheckoutSolutionTest
 	@Test
 	public void sCosts30()
 	{
-		assertEquals(30, solution.checkout("S").intValue());
+		assertEquals(20, solution.checkout("S").intValue());
 	}
 
 	@Test
@@ -291,20 +291,20 @@ public class CheckoutSolutionTest
 	}
 
 	@Test
-	public void xCosts90()
+	public void xCosts17()
 	{
-		assertEquals(90, solution.checkout("X").intValue());
+		assertEquals(17, solution.checkout("X").intValue());
 	}
 
 	@Test
-	public void yCosts10()
+	public void yCosts20()
 	{
-		assertEquals(10, solution.checkout("Y").intValue());
+		assertEquals(20, solution.checkout("Y").intValue());
 	}
 
 	@Test
-	public void zCosts50()
+	public void zCosts21()
 	{
-		assertEquals(50, solution.checkout("Z").intValue());
+		assertEquals(21, solution.checkout("Z").intValue());
 	}
 }

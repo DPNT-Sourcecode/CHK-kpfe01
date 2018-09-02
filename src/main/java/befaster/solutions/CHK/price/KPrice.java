@@ -10,10 +10,10 @@ public class KPrice implements Price
 		int price = 0;
 		int kCount = itemCounts.get('K');
 
-		price += (kCount / 2) * 150;
+		price += (kCount / 2) * 120;
 		kCount = kCount % 2;
 
-		price += kCount * 80;
+		price += kCount * 70;
 
 		return price;
 	}
