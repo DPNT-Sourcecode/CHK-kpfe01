@@ -9,7 +9,19 @@ public class CheckoutSolutionTest
 	private CheckoutSolution solution = new CheckoutSolution();
 
 	@Test
-	public void blandCosts0()
+	public void smallAReturnsMinus1()
+	{
+		assertEquals(-1, solution.checkout("a").intValue());
+	}
+
+	@Test
+	public void dashReturnsMinus1()
+	{
+		assertEquals(-1, solution.checkout("-").intValue());
+	}
+
+	@Test
+	public void blankCosts0()
 	{
 		assertEquals(0, solution.checkout("").intValue());
 	}

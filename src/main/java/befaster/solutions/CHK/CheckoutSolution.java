@@ -28,8 +28,17 @@ public class CheckoutSolution
             {
                 dCount++;
             }
+            else
+            {
+                return -1;
+            }
         }
 
+        return getTotal(aCount, bCount, cCount, dCount);
+    }
+
+    private int getTotal(int aCount, int bCount, int cCount, int dCount)
+    {
         int totalPrice = 0;
 
         if (aCount == 3)
