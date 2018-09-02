@@ -2,11 +2,14 @@ package befaster.solutions.CHK;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.ServiceLoader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CheckoutSolution
 {
+    ServiceLoader<Price> prices = ServiceLoader.load(Price.class);
+
     private char[] alphabet = new char[]
         {
             'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
@@ -29,12 +32,11 @@ public class CheckoutSolution
 
         int totalPrice = 0;
 
-        totalPrice += new FPrice().getPrice(itemCounts);
-        totalPrice += new EPrice().getPrice(itemCounts);
-        totalPrice += new DPrice().getPrice(itemCounts);
-        totalPrice += new CPrice().getPrice(itemCounts);
-        totalPrice += new BPrice().getPrice(itemCounts);
-        totalPrice += new APrice().getPrice(itemCounts);
+        for (Price price: prices)
+        {
+            System.out.print(price);
+            totalPrice += price.getPrice(itemCounts);
+        }
 
         return totalPrice;
     }
