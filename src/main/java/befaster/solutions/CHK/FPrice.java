@@ -2,15 +2,14 @@ package befaster.solutions.CHK;
 
 import java.util.Map;
 
-public class EPrice implements Price
+public class FPrice implements Price
 {
 	@Override
 	public int getPrice(Map<Character, Integer> itemCounts)
 	{
-		int newBCount = Math.max(0, itemCounts.get('B') - (itemCounts.get('E') / 2));
+		int oldFCount = itemCounts.get('F');
+		int newFCount = oldFCount - (oldFCount / 3);
 
-		itemCounts.put('B', newBCount);
-
-		return itemCounts.get('E') * 40;
+		return newFCount * 10;
 	}
 }
