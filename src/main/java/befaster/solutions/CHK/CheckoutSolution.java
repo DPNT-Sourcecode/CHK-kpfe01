@@ -29,7 +29,7 @@ public class CheckoutSolution
             int itemPrice = prices.get(sku);
             int itemCount = getItemCount(item);
 
-            totalPrice += itemPrice;
+            totalPrice += itemPrice * itemCount;
         }
 
         return  totalPrice;
