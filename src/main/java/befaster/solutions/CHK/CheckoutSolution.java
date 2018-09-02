@@ -29,6 +29,10 @@ public class CheckoutSolution
             {
                 dCount++;
             }
+            else if (item == 'E')
+            {
+                eCount++;
+            }
             else
             {
                 return -1;
