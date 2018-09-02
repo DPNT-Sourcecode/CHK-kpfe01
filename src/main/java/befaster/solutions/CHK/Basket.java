@@ -1,30 +1,16 @@
 package befaster.solutions.CHK;
 
+import java.util.Map;
+
 public class Basket
 {
-	private int aCount;
-
-	private int bCount;
-
-	private int cCount;
-
-	private int dCount;
-
-	private int eCount;
-
-	private int fCount;
+	private Map<Character, Integer> itemCounts;
 
 	private int totalPrice = 0;
 
-	public Basket(int aCount, int bCount, int cCount, int dCount, int eCount, int fCount)
+	public Basket(Map<Character, Integer> itemCounts)
 	{
-
-		this.aCount = aCount;
-		this.bCount = bCount;
-		this.cCount = cCount;
-		this.dCount = dCount;
-		this.eCount = eCount;
-		this.fCount = fCount;
+		this.itemCounts = itemCounts;
 	}
 
 	public int total()
@@ -35,42 +21,45 @@ public class Basket
 		twoBsCosts45();
 		threeFsForPriceOfTwo();
 
-		totalPrice += aCount * 50;
-		totalPrice += bCount * 30;
-		totalPrice += cCount * 20;
-		totalPrice += dCount * 15;
-		totalPrice += eCount * 40;
-		totalPrice += fCount * 10;
+		totalPrice += itemCounts.get('A') * 50;
+		totalPrice += itemCounts.get('B') * 30;
+		totalPrice += itemCounts.get('C') * 20;
+		totalPrice += itemCounts.get('D') * 15;
+		totalPrice += itemCounts.get('E') * 40;
+		totalPrice += itemCounts.get('F') * 10;
 
 		return totalPrice;
 	}
 
 	private void oneFreeBForTwoEs()
 	{
-		bCount -= (eCount / 2);
-		bCount = Math.max(0, bCount);
+		int newBCount = Math.max(0, itemCounts.get('B') - (itemCounts.get('E') / 2));
+
+		itemCounts.put('B', newBCount);
 	}
 
 	private void fiveAsCosts200()
 	{
-		totalPrice += (aCount / 5) * 200;
-		aCount = aCount % 5;
+		totalPrice += (itemCounts.get('A') / 5) * 200;
+		itemCounts.put('A', itemCounts.get('A') % 5);
 	}
 
 	private void threeAsCosts130()
 	{
-		totalPrice += (aCount / 3) * 130;
-		aCount = aCount % 3;
+		totalPrice += (itemCounts.get('A') / 3) * 130;
+		itemCounts.put('A', itemCounts.get('A') % 3);
 	}
 
 	private void twoBsCosts45()
 	{
-		totalPrice += (bCount / 2) * 45;
-		bCount = bCount % 2;
+		totalPrice += (itemCounts.get('B') / 2) * 45;
+		itemCounts.put('B', itemCounts.get('B') % 2);
 	}
 
 	private void threeFsForPriceOfTwo()
 	{
-		fCount -= (fCount / 3);
+		int oldFCount = itemCounts.get('F');
+
+		itemCounts.put('F', oldFCount - (oldFCount / 3));
 	}
 }

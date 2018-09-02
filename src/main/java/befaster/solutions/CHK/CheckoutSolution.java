@@ -7,10 +7,10 @@ import java.util.regex.Pattern;
 
 public class CheckoutSolution
 {
-    private String[] alphabet = new String[]
+    private char[] alphabet = new char[]
         {
-            "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
-            "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
+            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+            'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
         };
 
     public Integer checkout(String skus)
@@ -20,50 +20,14 @@ public class CheckoutSolution
             return -1;
         }
 
-        Map<String, Integer> itemCounts = new HashMap<>();
+        Map<Character, Integer> itemCounts = new HashMap<>();
 
-        for (String item: alphabet)
+        for (char item: alphabet)
         {
             itemCounts.put(item, getCount(skus, item));
         }
 
-        int aCount = 0;
-        int bCount = 0;
-        int cCount = 0;
-        int dCount = 0;
-        int eCount = 0;
-        int fCount = 0;
-        char[] items = skus.toCharArray();
-
-        for (char item: items)
-        {
-            if (item == 'A')
-            {
-                aCount++;
-            }
-            else if (item == 'B')
-            {
-                bCount++;
-            }
-            else if (item == 'C')
-            {
-                cCount++;
-            }
-            else if (item == 'D')
-            {
-                dCount++;
-            }
-            else if (item == 'E')
-            {
-                eCount++;
-            }
-            else if (item == 'F')
-            {
-                fCount++;
-            }
-        }
-
-        return new Basket(aCount, bCount, cCount, dCount, eCount, fCount).total();
+        return new Basket(itemCounts).total();
     }
 
     private boolean isValid(String skus)
@@ -73,10 +37,18 @@ public class CheckoutSolution
         return m.matches();
     }
 
-    private int getCount(String skus, String item)
+    private int getCount(String skus, char item)
     {
-        Pattern p = Pattern.compile("[A-Z]*");
-        Matcher m = p.matcher(skus);
-        return m.matches();
+        int count = 0;
+
+        for (char letter: skus.toCharArray())
+        {
+            if (letter == item)
+            {
+                count++;
+            }
+        }
+
+        return count;
     }
 }
