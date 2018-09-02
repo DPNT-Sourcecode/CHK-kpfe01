@@ -8,14 +8,15 @@ public class APrice implements Price
 	public int getPrice(Map<Character, Integer> itemCounts)
 	{
 		int price = 0;
+		int aCount = itemCounts.get('A');
 
-		price += (itemCounts.get('A') / 5) * 200;
-		itemCounts.put('A', itemCounts.get('A') % 5);
+		price += (aCount / 5) * 200;
+		aCount = aCount % 5;
 
-		price += (itemCounts.get('A') / 3) * 130;
-		itemCounts.put('A', itemCounts.get('A') % 3);
+		price += (aCount / 3) * 130;
+		aCount = aCount % 3;
 
-		price += itemCounts.get('A') * 50;
+		price += aCount * 50;
 
 		return price;
 	}

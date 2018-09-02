@@ -8,11 +8,12 @@ public class BPrice implements Price
 	public int getPrice(Map<Character, Integer> itemCounts)
 	{
 		int price = 0;
+		int bCount = itemCounts.get('B');
 
-		price += (itemCounts.get('B') / 2) * 45;
-		itemCounts.put('B', itemCounts.get('B') % 2);
+		price += (bCount / 2) * 45;
+		bCount = bCount % 2;
 
-		price += itemCounts.get('B') * 30;
+		price += bCount * 30;
 
 		return price;
 	}
