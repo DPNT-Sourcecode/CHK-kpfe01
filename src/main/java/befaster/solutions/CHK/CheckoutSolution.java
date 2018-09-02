@@ -8,7 +8,7 @@ public class CheckoutSolution
 {
     private List<Price> prices =
         Arrays.asList(
-            new FPrice(),
+            new GPrice(), new FPrice(),
             new EPrice(), new DPrice(), new CPrice(), new BPrice(), new APrice());
 
     private char[] alphabet = new char[]
