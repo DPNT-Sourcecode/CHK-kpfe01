@@ -121,4 +121,10 @@ public class CheckoutSolutionTest
 	{
 		assertEquals(115, solution.checkout("ABCD").intValue());
 	}
+
+	@Test
+	public void gCosts20()
+	{
+		assertEquals(20, solution.checkout("G").intValue());
+	}
 }
