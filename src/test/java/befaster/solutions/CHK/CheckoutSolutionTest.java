@@ -181,4 +181,16 @@ public class CheckoutSolutionTest
 	{
 		assertEquals(15, solution.checkout("M").intValue());
 	}
+
+	@Test
+	public void NCosts40()
+	{
+		assertEquals(40, solution.checkout("N").intValue());
+	}
+
+	@Test
+	public void threeNsAndOneMCost120()
+	{
+		assertEquals(120, solution.checkout("NNNM").intValue());
+	}
 }
