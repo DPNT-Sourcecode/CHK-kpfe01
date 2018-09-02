@@ -1,34 +1,34 @@
 package befaster.solutions.CHK;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CheckoutSolution
 {
+    private Map<String, Integer> prices = new HashMap<>();
+
+    {
+        prices.put("A", 50);
+        prices.put("B", 30);
+        prices.put("C", 20);
+        prices.put("D", 15);
+    }
+
     public Integer checkout(String skus)
     {
         int totalPrice = 0;
+        List<String> items = getItems(skus);
 
-        if (skus.contains("A"))
+        for (String item: items)
         {
-            totalPrice += 50;
-        }
+            String sku = item.substring(item.length() - 1);
+            int itemPrice = prices.get(sku);
 
-        if (skus.contains("B"))
-        {
-            totalPrice += 30;
-        }
-
-        if (skus.contains("C"))
-        {
-            totalPrice += 20;
-        }
-
-        if (skus.contains("D"))
-        {
-            totalPrice += 15;
+            totalPrice += itemPrice;
         }
 
         return  totalPrice;
