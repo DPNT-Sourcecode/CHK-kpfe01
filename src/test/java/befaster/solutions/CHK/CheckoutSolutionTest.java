@@ -159,15 +159,15 @@ public class CheckoutSolutionTest
 	}
 
 	@Test
-	public void kCosts80()
+	public void kCosts70()
 	{
-		assertEquals(80, solution.checkout("K").intValue());
+		assertEquals(70, solution.checkout("K").intValue());
 	}
 
 	@Test
-	public void twoKsCost150()
+	public void twoKsCost120()
 	{
-		assertEquals(150, solution.checkout("KK").intValue());
+		assertEquals(120, solution.checkout("KK").intValue());
 	}
 
 	@Test
