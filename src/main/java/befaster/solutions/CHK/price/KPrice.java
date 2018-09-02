@@ -8,12 +8,12 @@ public class KPrice implements Price
 	public int getPrice(Map<Character, Integer> itemCounts)
 	{
 		int price = 0;
-		int bCount = itemCounts.get('K');
+		int kCount = itemCounts.get('K');
 
-		price += (bCount / 2) * 150;
-		bCount = bCount % 2;
+		price += (kCount / 2) * 150;
+		kCount = kCount % 2;
 
-		price += bCount * 80;
+		price += kCount * 80;
 
 		return price;
 	}

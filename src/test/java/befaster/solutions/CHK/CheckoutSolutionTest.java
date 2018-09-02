@@ -221,6 +221,6 @@ public class CheckoutSolutionTest
 	@Test
 	public void threeQsCost80()
 	{
-		assertEquals(200, solution.checkout("QQQ").intValue());
+		assertEquals(80, solution.checkout("QQQ").intValue());
 	}
 }
