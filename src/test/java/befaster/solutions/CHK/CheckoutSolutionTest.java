@@ -127,4 +127,22 @@ public class CheckoutSolutionTest
 	{
 		assertEquals(20, solution.checkout("G").intValue());
 	}
+
+	@Test
+	public void hCosts10()
+	{
+		assertEquals(10, solution.checkout("H").intValue());
+	}
+
+	@Test
+	public void fiveHsCost45()
+	{
+		assertEquals(45, solution.checkout("HHHHH").intValue());
+	}
+
+	@Test
+	public void tenHsCost80()
+	{
+		assertEquals(80, solution.checkout("HHHHHHHHHH").intValue());
+	}
 }
