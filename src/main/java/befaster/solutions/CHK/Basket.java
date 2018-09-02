@@ -33,6 +33,7 @@ public class Basket
 		fiveAsCosts200();
 		threeAsCosts130();
 		twoBsCosts45();
+		threeFsForPriceOfTwo();
 
 		totalPrice += aCount * 50;
 		totalPrice += bCount * 30;
@@ -66,5 +67,10 @@ public class Basket
 	{
 		totalPrice += (bCount / 2) * 45;
 		bCount = bCount % 2;
+	}
+
+	private void threeFsForPriceOfTwo()
+	{
+		fCount -= (fCount / 3);
 	}
 }

@@ -33,25 +33,25 @@ public class CheckoutSolutionTest
 	}
 
 	@Test
-	public void twoAsCosts100()
+	public void twoAsCost100()
 	{
 		assertEquals(100, solution.checkout("AA").intValue());
 	}
 
 	@Test
-	public void threeAsCosts130()
+	public void threeAsCost130()
 	{
 		assertEquals(130, solution.checkout("AAA").intValue());
 	}
 
 	@Test
-	public void fourAsCosts180()
+	public void fourAsCost180()
 	{
 		assertEquals(180, solution.checkout("AAAA").intValue());
 	}
 
 	@Test
-	public void fiveAsCosts200()
+	public void fiveAsCost200()
 	{
 		assertEquals(200, solution.checkout("AAAAA").intValue());
 	}
@@ -63,13 +63,13 @@ public class CheckoutSolutionTest
 	}
 
 	@Test
-	public void twoBsCosts45()
+	public void twoBsCost45()
 	{
 		assertEquals(45, solution.checkout("BB").intValue());
 	}
 
 	@Test
-	public void threeBsCosts()
+	public void threeBsCost75()
 	{
 		assertEquals(75, solution.checkout("BBB").intValue());
 	}
@@ -102,6 +102,18 @@ public class CheckoutSolutionTest
 	public void fCosts10()
 	{
 		assertEquals(10, solution.checkout("F").intValue());
+	}
+
+	@Test
+	public void twoFsCost20()
+	{
+		assertEquals(20, solution.checkout("FF").intValue());
+	}
+
+	@Test
+	public void threeFCost20()
+	{
+		assertEquals(20, solution.checkout("FFF").intValue());
 	}
 
 	@Test
