@@ -17,14 +17,32 @@ public class CheckoutSolution
 
     public Integer checkout(String skus)
     {
-        int totalPrice = 0;
+        int aCount = 0;
+        int bCount = 0;
+        int cCount = 0;
+        int dCount = 0;
         char[] items = skus.toCharArray();
 
         for (char item: items)
         {
-            totalPrice += prices.get(item);
+            if (item == 'A')
+            {
+                aCount++;
+            }
+            else if (item == 'B')
+            {
+                bCount++;
+            }
+            else if (item == 'C')
+            {
+                cCount++;
+            }
+            else if (item == 'D')
+            {
+                dCount++;
+            }
         }
 
-        return  totalPrice;
+        return aCount * 50 + bCount * 30 + cCount * 20 + dCount * 15;
     }
 }
