@@ -32,6 +32,7 @@ public class CheckoutSolution
         totalPrice += new APrice().getPrice(itemCounts);
         totalPrice += new Basket(itemCounts).total();
         totalPrice += new BPrice().getPrice(itemCounts);
+        totalPrice += new CPrice().getPrice(itemCounts);
 
         return totalPrice;
     }

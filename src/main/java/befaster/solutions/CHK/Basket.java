@@ -18,8 +18,6 @@ public class Basket
 		oneFreeBForTwoEs();
 		threeFsForPriceOfTwo();
 
-		totalPrice += itemCounts.get('C') * 20;
-		totalPrice += itemCounts.get('D') * 15;
 		totalPrice += itemCounts.get('E') * 40;
 		totalPrice += itemCounts.get('F') * 10;
 
