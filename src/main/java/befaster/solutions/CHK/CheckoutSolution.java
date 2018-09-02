@@ -12,9 +12,9 @@ public class CheckoutSolution
         Arrays.asList(
             new VPrice(), new UPrice(),
             new TPrice(), new SPrice(), new RPrice(), new QPrice(), new PPrice(),
-            new OPrice(), new NPrice(), new MPrice(), new LPrice(), new KPrice(),
-            new JPrice(), new IPrice(), new HPrice(), new GPrice(), new FPrice(),
-            new EPrice(), new DPrice(), new CPrice(), new BPrice(), new APrice());
+            new SimplePrice('O', 10), new NPrice(), new SimplePrice('M', 15), new SimplePrice('L', 90), new KPrice(),
+            new SimplePrice('J', 60), new SimplePrice('I', 35), new HPrice(), new SimplePrice('G', 20), new FPrice(),
+            new EPrice(), new SimplePrice('D', 15), new SimplePrice('C', 20), new BPrice(), new APrice());
 
     private char[] alphabet = new char[]
         {
