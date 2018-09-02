@@ -46,4 +46,9 @@ public class CheckoutSolution
 
         return new Basket(aCount, bCount, cCount, dCount, eCount, fCount).total();
     }
+
+    private boolean isValid(String skus)
+    {
+        
+    }
 }
