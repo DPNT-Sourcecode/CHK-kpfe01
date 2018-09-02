@@ -223,4 +223,28 @@ public class CheckoutSolutionTest
 	{
 		assertEquals(80, solution.checkout("QQQ").intValue());
 	}
+
+	@Test
+	public void RCosts50()
+	{
+		assertEquals(50, solution.checkout("R").intValue());
+	}
+
+	@Test
+	public void threeRsAndOneQCost150()
+	{
+		assertEquals(150, solution.checkout("RRRQ").intValue());
+	}
+
+	@Test
+	public void SCosts30()
+	{
+		assertEquals(30, solution.checkout("S").intValue());
+	}
+
+	@Test
+	public void TCosts20()
+	{
+		assertEquals(20, solution.checkout("T").intValue());
+	}
 }
