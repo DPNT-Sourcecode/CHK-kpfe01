@@ -53,7 +53,7 @@ public class CheckoutSolutionTest
 	@Test
 	public void fiveAsCosts200()
 	{
-		assertEquals(230, solution.checkout("AAAAA").intValue());
+		assertEquals(200, solution.checkout("AAAAA").intValue());
 	}
 
 	@Test
