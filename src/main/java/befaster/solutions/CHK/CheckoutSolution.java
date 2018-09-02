@@ -17,7 +17,7 @@ public class CheckoutSolution
             new VPrice(),
             new UPrice(),
             new SimplePrice('T', 20),
-            new SimplePrice('S', 30),
+            new SimplePrice('S', 20),
             new RPrice(),
             new QPrice(),
             new PPrice(),
