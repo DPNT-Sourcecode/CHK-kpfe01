@@ -15,6 +15,34 @@ public class STXYZPrice implements Price
 		int yCount = itemCounts.get('Y');
 		int zCount = itemCounts.get('Z');
 
+		int totalCount = sCount + tCount + xCount + yCount + zCount;
+		int highestMultipleOfThree = totalCount - (totalCount % 3);
+
+		for (int i = 0; i < highestMultipleOfThree; i++)
+		{
+			if (zCount > 0)
+			{
+				zCount--;
+			}
+			else if (yCount > 0)
+			{
+				yCount--;
+			}
+			else if (sCount > 0)
+			{
+				sCount--;
+			}
+			else if (tCount > 0)
+			{
+				tCount--;
+			}
+			else
+			{
+				xCount--;
+			}
+		}
+
+		price += (totalCount / 3) * 45;
 		price += sCount * 20;
 		price += tCount * 20;
 		price += xCount * 17;
