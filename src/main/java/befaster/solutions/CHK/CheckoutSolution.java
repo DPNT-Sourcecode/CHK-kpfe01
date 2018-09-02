@@ -10,14 +10,10 @@ public class CheckoutSolution
 {
     private List<Price> prices =
         Arrays.asList(
-            new SimplePrice('Z', 21),
-            new SimplePrice('Y', 20),
-            new SimplePrice('X', 17),
+            new STXYZPrice(),
             new SimplePrice('W', 20),
             new VPrice(),
             new UPrice(),
-            new SimplePrice('T', 20),
-            new SimplePrice('S', 20),
             new RPrice(),
             new QPrice(),
             new PPrice(),
