@@ -7,10 +7,10 @@ public class NPrice implements Price
 	@Override
 	public int getPrice(Map<Character, Integer> itemCounts)
 	{
-		int newBCount = Math.max(0, itemCounts.get('B') - (itemCounts.get('E') / 2));
+		int newMCount = Math.max(0, itemCounts.get('M') - (itemCounts.get('N') / 3));
 
-		itemCounts.put('B', newBCount);
+		itemCounts.put('M', newMCount);
 
-		return itemCounts.get('E') * 40;
+		return itemCounts.get('N') * 40;
 	}
 }

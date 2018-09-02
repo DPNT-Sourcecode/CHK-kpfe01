@@ -193,4 +193,22 @@ public class CheckoutSolutionTest
 	{
 		assertEquals(120, solution.checkout("NNNM").intValue());
 	}
+
+	@Test
+	public void OCosts10()
+	{
+		assertEquals(10, solution.checkout("O").intValue());
+	}
+
+	@Test
+	public void PCosts50()
+	{
+		assertEquals(50, solution.checkout("P").intValue());
+	}
+
+	@Test
+	public void fivePsCost200()
+	{
+		assertEquals(200, solution.checkout("PPPPP").intValue());
+	}
 }
