@@ -259,4 +259,22 @@ public class CheckoutSolutionTest
 	{
 		assertEquals(120, solution.checkout("UUUU").intValue());
 	}
+
+	@Test
+	public void VCosts50()
+	{
+		assertEquals(50, solution.checkout("V").intValue());
+	}
+
+	@Test
+	public void twoVsCost90()
+	{
+		assertEquals(90, solution.checkout("VV").intValue());
+	}
+
+	@Test
+	public void threeVsCost130()
+	{
+		assertEquals(130, solution.checkout("VVV").intValue());
+	}
 }

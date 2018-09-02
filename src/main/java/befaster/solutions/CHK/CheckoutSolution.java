@@ -10,7 +10,7 @@ public class CheckoutSolution
 {
     private List<Price> prices =
         Arrays.asList(
-            new UPrice(),
+            new VPrice(), new UPrice(),
             new TPrice(), new SPrice(), new RPrice(), new QPrice(), new PPrice(),
             new OPrice(), new NPrice(), new MPrice(), new LPrice(), new KPrice(),
             new JPrice(), new IPrice(), new HPrice(), new GPrice(), new FPrice(),

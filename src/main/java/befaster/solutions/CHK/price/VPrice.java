@@ -2,21 +2,21 @@ package befaster.solutions.CHK.price;
 
 import java.util.Map;
 
-public class APrice implements Price
+public class VPrice implements Price
 {
 	@Override
 	public int getPrice(Map<Character, Integer> itemCounts)
 	{
 		int price = 0;
-		int aCount = itemCounts.get('A');
+		int vCount = itemCounts.get('V');
 
-		price += (aCount / 5) * 200;
-		aCount = aCount % 5;
+		price += (vCount / 3) * 130;
+		vCount = vCount % 3;
 
-		price += (aCount / 3) * 130;
-		aCount = aCount % 3;
+		price += (vCount / 2) * 90;
+		vCount = vCount % 2;
 
-		price += aCount * 50;
+		price += vCount * 50;
 
 		return price;
 	}
