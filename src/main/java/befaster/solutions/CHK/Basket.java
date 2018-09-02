@@ -6,25 +6,24 @@ public class Basket
 {
 	private Map<Character, Integer> itemCounts;
 
-	private int totalPrice;
-
-	public Basket(Map<Character, Integer> itemCounts, int totalPrice)
+	public Basket(Map<Character, Integer> itemCounts)
 	{
 		this.itemCounts = itemCounts;
-		this.totalPrice = totalPrice;
 	}
 
 	public int total()
 	{
+		int totalPrice = 0;
+
 		oneFreeBForTwoEs();
 		threeFsForPriceOfTwo();
 
-		this.totalPrice += itemCounts.get('C') * 20;
-		this.totalPrice += itemCounts.get('D') * 15;
-		this.totalPrice += itemCounts.get('E') * 40;
-		this.totalPrice += itemCounts.get('F') * 10;
+		totalPrice += itemCounts.get('C') * 20;
+		totalPrice += itemCounts.get('D') * 15;
+		totalPrice += itemCounts.get('E') * 40;
+		totalPrice += itemCounts.get('F') * 10;
 
-		return this.totalPrice;
+		return totalPrice;
 	}
 
 	private void oneFreeBForTwoEs()

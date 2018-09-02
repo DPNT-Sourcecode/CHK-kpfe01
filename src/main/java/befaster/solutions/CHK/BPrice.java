@@ -12,7 +12,7 @@ public class BPrice implements Price
 		price += (itemCounts.get('B') / 2) * 45;
 		itemCounts.put('B', itemCounts.get('B') % 2);
 
-		price += itemCounts.get('A') * 30;
+		price += itemCounts.get('B') * 30;
 
 		return price;
 	}
