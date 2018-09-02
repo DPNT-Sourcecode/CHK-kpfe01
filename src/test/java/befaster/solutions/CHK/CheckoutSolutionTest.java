@@ -9,6 +9,12 @@ public class CheckoutSolutionTest
 	private CheckoutSolution solution = new CheckoutSolution();
 
 	@Test
+	public void blandCosts0()
+	{
+		assertEquals(0, solution.checkout("").intValue());
+	}
+
+	@Test
 	public void aCosts50()
 	{
 		assertEquals(50, solution.checkout("A").intValue());
@@ -17,7 +23,7 @@ public class CheckoutSolutionTest
 	@Test
 	public void twoAsCosts100()
 	{
-		assertEquals(100, solution.checkout("2A").intValue());
+		assertEquals(100, solution.checkout("AA").intValue());
 	}
 
 	@Test
