@@ -20,9 +20,9 @@ public class STXYZPrice implements Price
 
 		for (int i = 0; i < highestMultipleOfThree; i++)
 		{
-			if (zCount > 0)
+			if (xCount > 0)
 			{
-				zCount--;
+				xCount--;
 			}
 			else if (yCount > 0)
 			{
@@ -38,7 +38,7 @@ public class STXYZPrice implements Price
 			}
 			else
 			{
-				xCount--;
+				zCount--;
 			}
 		}
 

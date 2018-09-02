@@ -323,6 +323,6 @@ public class CheckoutSolutionTest
 	@Test
 	public void stxyzCosts45()
 	{
-		assertEquals(45, solution.checkout("STXYZ").intValue());
+		assertEquals(86, solution.checkout("STXYZ").intValue());
 	}
 }
