@@ -1,5 +1,8 @@
 package befaster.solutions.CHK;
 
-public class Price
+import java.util.Map;
+
+public interface Price
 {
+	int getPrice(Map<Character, Integer> itemCounts);
 }

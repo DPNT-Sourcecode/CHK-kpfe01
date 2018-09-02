@@ -6,29 +6,27 @@ public class Basket
 {
 	private Map<Character, Integer> itemCounts;
 
-	private int totalPrice = 0;
+	private int totalPrice;
 
-	public Basket(Map<Character, Integer> itemCounts)
+	public Basket(Map<Character, Integer> itemCounts, int totalPrice)
 	{
 		this.itemCounts = itemCounts;
+		this.totalPrice = totalPrice;
 	}
 
 	public int total()
 	{
 		oneFreeBForTwoEs();
-		fiveAsCosts200();
-		threeAsCosts130();
 		twoBsCosts45();
 		threeFsForPriceOfTwo();
 
-		totalPrice += itemCounts.get('A') * 50;
-		totalPrice += itemCounts.get('B') * 30;
-		totalPrice += itemCounts.get('C') * 20;
-		totalPrice += itemCounts.get('D') * 15;
-		totalPrice += itemCounts.get('E') * 40;
-		totalPrice += itemCounts.get('F') * 10;
+		this.totalPrice += itemCounts.get('B') * 30;
+		this.totalPrice += itemCounts.get('C') * 20;
+		this.totalPrice += itemCounts.get('D') * 15;
+		this.totalPrice += itemCounts.get('E') * 40;
+		this.totalPrice += itemCounts.get('F') * 10;
 
-		return totalPrice;
+		return this.totalPrice;
 	}
 
 	private void oneFreeBForTwoEs()
@@ -36,18 +34,6 @@ public class Basket
 		int newBCount = Math.max(0, itemCounts.get('B') - (itemCounts.get('E') / 2));
 
 		itemCounts.put('B', newBCount);
-	}
-
-	private void fiveAsCosts200()
-	{
-		totalPrice += (itemCounts.get('A') / 5) * 200;
-		itemCounts.put('A', itemCounts.get('A') % 5);
-	}
-
-	private void threeAsCosts130()
-	{
-		totalPrice += (itemCounts.get('A') / 3) * 130;
-		itemCounts.put('A', itemCounts.get('A') % 3);
 	}
 
 	private void twoBsCosts45()

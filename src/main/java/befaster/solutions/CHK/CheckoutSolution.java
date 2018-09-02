@@ -27,7 +27,11 @@ public class CheckoutSolution
             itemCounts.put(item, getCount(skus, item));
         }
 
-        return new Basket(itemCounts).total();
+        int totalPrice = 0;
+
+        totalPrice += new APrice().getPrice(itemCounts);
+
+        return new Basket(itemCounts, totalPrice).total();
     }
 
     private boolean isValid(String skus)
