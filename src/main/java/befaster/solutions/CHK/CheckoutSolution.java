@@ -10,11 +10,32 @@ public class CheckoutSolution
 {
     private List<Price> prices =
         Arrays.asList(
-            new VPrice(), new UPrice(),
-            new TPrice(), new SPrice(), new RPrice(), new QPrice(), new PPrice(),
-            new SimplePrice('O', 10), new NPrice(), new SimplePrice('M', 15), new SimplePrice('L', 90), new KPrice(),
-            new SimplePrice('J', 60), new SimplePrice('I', 35), new HPrice(), new SimplePrice('G', 20), new FPrice(),
-            new EPrice(), new SimplePrice('D', 15), new SimplePrice('C', 20), new BPrice(), new APrice());
+            new SimplePrice('Z', 50),
+            new SimplePrice('Y', 10),
+            new SimplePrice('X', 90),
+            new SimplePrice('W', 20),
+            new VPrice(),
+            new UPrice(),
+            new SimplePrice('T', 20),
+            new SimplePrice('S', 30),
+            new RPrice(),
+            new QPrice(),
+            new PPrice(),
+            new SimplePrice('O', 10),
+            new NPrice(),
+            new SimplePrice('M', 15),
+            new SimplePrice('L', 90),
+            new KPrice(),
+            new SimplePrice('J', 60),
+            new SimplePrice('I', 35),
+            new HPrice(),
+            new SimplePrice('G', 20),
+            new FPrice(),
+            new EPrice(),
+            new SimplePrice('D', 15),
+            new SimplePrice('C', 20),
+            new BPrice(),
+            new APrice());
 
     private char[] alphabet = new char[]
         {

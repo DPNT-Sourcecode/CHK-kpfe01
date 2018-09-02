@@ -171,19 +171,19 @@ public class CheckoutSolutionTest
 	}
 
 	@Test
-	public void LCosts90()
+	public void lCosts90()
 	{
 		assertEquals(90, solution.checkout("L").intValue());
 	}
 
 	@Test
-	public void MCosts15()
+	public void mCosts15()
 	{
 		assertEquals(15, solution.checkout("M").intValue());
 	}
 
 	@Test
-	public void NCosts40()
+	public void nCosts40()
 	{
 		assertEquals(40, solution.checkout("N").intValue());
 	}
@@ -195,13 +195,13 @@ public class CheckoutSolutionTest
 	}
 
 	@Test
-	public void OCosts10()
+	public void oCosts10()
 	{
 		assertEquals(10, solution.checkout("O").intValue());
 	}
 
 	@Test
-	public void PCosts50()
+	public void pCosts50()
 	{
 		assertEquals(50, solution.checkout("P").intValue());
 	}
@@ -213,7 +213,7 @@ public class CheckoutSolutionTest
 	}
 
 	@Test
-	public void QCosts30()
+	public void qCosts30()
 	{
 		assertEquals(30, solution.checkout("Q").intValue());
 	}
@@ -225,7 +225,7 @@ public class CheckoutSolutionTest
 	}
 
 	@Test
-	public void RCosts50()
+	public void rCosts50()
 	{
 		assertEquals(50, solution.checkout("R").intValue());
 	}
@@ -237,19 +237,19 @@ public class CheckoutSolutionTest
 	}
 
 	@Test
-	public void SCosts30()
+	public void sCosts30()
 	{
 		assertEquals(30, solution.checkout("S").intValue());
 	}
 
 	@Test
-	public void TCosts20()
+	public void tCosts20()
 	{
 		assertEquals(20, solution.checkout("T").intValue());
 	}
 
 	@Test
-	public void UCosts40()
+	public void uCosts40()
 	{
 		assertEquals(40, solution.checkout("U").intValue());
 	}
@@ -261,7 +261,7 @@ public class CheckoutSolutionTest
 	}
 
 	@Test
-	public void VCosts50()
+	public void vCosts50()
 	{
 		assertEquals(50, solution.checkout("V").intValue());
 	}
@@ -276,5 +276,29 @@ public class CheckoutSolutionTest
 	public void threeVsCost130()
 	{
 		assertEquals(130, solution.checkout("VVV").intValue());
+	}
+
+	@Test
+	public void wCosts20()
+	{
+		assertEquals(20, solution.checkout("W").intValue());
+	}
+
+	@Test
+	public void xCosts90()
+	{
+		assertEquals(90, solution.checkout("X").intValue());
+	}
+
+	@Test
+	public void yCosts10()
+	{
+		assertEquals(10, solution.checkout("Y").intValue());
+	}
+
+	@Test
+	public void zCosts50()
+	{
+		assertEquals(50, solution.checkout("Z").intValue());
 	}
 }
