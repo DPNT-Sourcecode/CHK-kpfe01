@@ -1,20 +1,7 @@
 package befaster.solutions.CHK;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class CheckoutSolution
 {
-    private Map<Character, Integer> prices = new HashMap<>();
-
-    public CheckoutSolution()
-    {
-        prices.put('A', 50);
-        prices.put('B', 30);
-        prices.put('C', 20);
-        prices.put('D', 15);
-    }
-
     public Integer checkout(String skus)
     {
         int aCount = 0;
@@ -43,6 +30,29 @@ public class CheckoutSolution
             }
         }
 
-        return aCount * 50 + bCount * 30 + cCount * 20 + dCount * 15;
+        int totalPrice = 0;
+
+        if (aCount == 3)
+        {
+            totalPrice += 130;
+        }
+        else
+        {
+            totalPrice += aCount * 50;
+        }
+
+        if (bCount == 2)
+        {
+            totalPrice += 45;
+        }
+        else
+        {
+            totalPrice += bCount * 30;
+        }
+
+        totalPrice += cCount * 20;
+        totalPrice += dCount * 15;
+
+        return totalPrice;
     }
 }
