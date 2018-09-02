@@ -28,13 +28,11 @@ public class Basket
 	{
 		oneFreeBForTwoEs();
 		fiveAsCosts200();
+		threeAsCosts130();
+		twoBsCosts45();
 
-		totalPrice += (aCount / 3) * 130;
-		totalPrice += (aCount % 3) * 50;
-
-		totalPrice += (bCount / 2) * 45;
-		totalPrice += (bCount % 2) * 30;
-
+		totalPrice += aCount * 50;
+		totalPrice += bCount * 30;
 		totalPrice += cCount * 20;
 		totalPrice += dCount * 15;
 		totalPrice += eCount * 40;
@@ -52,5 +50,17 @@ public class Basket
 	{
 		totalPrice += (aCount / 5) * 200;
 		aCount = aCount % 5;
+	}
+
+	private void threeAsCosts130()
+	{
+		totalPrice += (aCount / 3) * 130;
+		aCount = aCount % 3;
+	}
+
+	private void twoBsCosts45()
+	{
+		totalPrice += (bCount / 2) * 45;
+		bCount = bCount % 2;
 	}
 }
