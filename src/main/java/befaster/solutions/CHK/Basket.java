@@ -12,9 +12,11 @@ public class Basket
 
 	private int eCount;
 
+	private int fCount;
+
 	private int totalPrice = 0;
 
-	public Basket(int aCount, int bCount, int cCount, int dCount, int eCount)
+	public Basket(int aCount, int bCount, int cCount, int dCount, int eCount, int fCount)
 	{
 
 		this.aCount = aCount;
@@ -22,6 +24,7 @@ public class Basket
 		this.cCount = cCount;
 		this.dCount = dCount;
 		this.eCount = eCount;
+		this.fCount = fCount;
 	}
 
 	public int total()
@@ -36,6 +39,7 @@ public class Basket
 		totalPrice += cCount * 20;
 		totalPrice += dCount * 15;
 		totalPrice += eCount * 40;
+		totalPrice += fCount * 10;
 
 		return totalPrice;
 	}

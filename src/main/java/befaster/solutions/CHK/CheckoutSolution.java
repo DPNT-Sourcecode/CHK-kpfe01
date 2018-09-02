@@ -9,6 +9,7 @@ public class CheckoutSolution
         int cCount = 0;
         int dCount = 0;
         int eCount = 0;
+        int fCount = 0;
         char[] items = skus.toCharArray();
 
         for (char item: items)
@@ -33,12 +34,16 @@ public class CheckoutSolution
             {
                 eCount++;
             }
+            else if (item == 'F')
+            {
+                fCount++;
+            }
             else
             {
                 return -1;
             }
         }
 
-        return new Basket(aCount, bCount, cCount, dCount, eCount).total();
+        return new Basket(aCount, bCount, cCount, dCount, eCount, fCount).total();
     }
 }
