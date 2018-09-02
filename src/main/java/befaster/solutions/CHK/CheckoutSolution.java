@@ -1,9 +1,17 @@
 package befaster.solutions.CHK;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class CheckoutSolution
 {
     public Integer checkout(String skus)
     {
+        if (!isValid(skus))
+        {
+            return -1;
+        }
+        
         int aCount = 0;
         int bCount = 0;
         int cCount = 0;
@@ -38,10 +46,6 @@ public class CheckoutSolution
             {
                 fCount++;
             }
-            else
-            {
-                return -1;
-            }
         }
 
         return new Basket(aCount, bCount, cCount, dCount, eCount, fCount).total();
@@ -49,6 +53,8 @@ public class CheckoutSolution
 
     private boolean isValid(String skus)
     {
-        
+        Pattern p = Pattern.compile("[A-Z]*");
+        Matcher m = p.matcher(skus);
+        return m.matches();
     }
 }
