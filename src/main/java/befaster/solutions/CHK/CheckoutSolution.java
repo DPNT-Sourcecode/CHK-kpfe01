@@ -41,17 +41,11 @@ public class CheckoutSolution
     {
         int totalPrice = 0;
 
-        totalPrice += (aCount % 3) * 150;
-        totalPrice += 
+        totalPrice += (aCount / 3) * 130;
+        totalPrice += (aCount % 3) * 50;
 
-        if (bCount == 2)
-        {
-            totalPrice += 45;
-        }
-        else
-        {
-            totalPrice += bCount * 30;
-        }
+        totalPrice += (bCount / 2) * 45;
+        totalPrice += (bCount % 2) * 30;
 
         totalPrice += cCount * 20;
         totalPrice += dCount * 15;

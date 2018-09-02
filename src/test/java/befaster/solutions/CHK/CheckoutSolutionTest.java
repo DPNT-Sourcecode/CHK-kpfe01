@@ -47,7 +47,7 @@ public class CheckoutSolutionTest
 	@Test
 	public void fourAsCosts180()
 	{
-		assertEquals(150, solution.checkout("AAA").intValue());
+		assertEquals(180, solution.checkout("AAAA").intValue());
 	}
 
 	@Test
@@ -60,6 +60,12 @@ public class CheckoutSolutionTest
 	public void twoBsCosts45()
 	{
 		assertEquals(45, solution.checkout("BB").intValue());
+	}
+
+	@Test
+	public void threeBsCosts()
+	{
+		assertEquals(75, solution.checkout("BBB").intValue());
 	}
 
 	@Test
