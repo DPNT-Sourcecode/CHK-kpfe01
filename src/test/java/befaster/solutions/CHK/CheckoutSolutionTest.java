@@ -45,6 +45,12 @@ public class CheckoutSolutionTest
 	}
 
 	@Test
+	public void fourAsCosts180()
+	{
+		assertEquals(150, solution.checkout("AAA").intValue());
+	}
+
+	@Test
 	public void bCosts30()
 	{
 		assertEquals(30, solution.checkout("B").intValue());

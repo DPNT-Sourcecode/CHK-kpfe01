@@ -41,14 +41,8 @@ public class CheckoutSolution
     {
         int totalPrice = 0;
 
-        if (aCount == 3)
-        {
-            totalPrice += 130;
-        }
-        else
-        {
-            totalPrice += aCount * 50;
-        }
+        totalPrice += (aCount % 3) * 150;
+        totalPrice += 
 
         if (bCount == 2)
         {
