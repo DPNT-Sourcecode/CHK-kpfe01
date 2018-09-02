@@ -27,6 +27,7 @@ public class CheckoutSolution
         {
             String sku = item.substring(item.length() - 1);
             int itemPrice = prices.get(sku);
+            int itemCount = getItemCount(item);
 
             totalPrice += itemPrice;
         }
@@ -47,5 +48,19 @@ public class CheckoutSolution
         }
 
         return items;
+    }
+
+    private int getItemCount(String item)
+    {
+        String number = item.substring(0, item.length() -1);
+
+        if (number.length() == 0)
+        {
+            return 1;
+        }
+        else
+        {
+            return Integer.parseInt(number);
+        }
     }
 }
