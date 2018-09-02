@@ -211,4 +211,16 @@ public class CheckoutSolutionTest
 	{
 		assertEquals(200, solution.checkout("PPPPP").intValue());
 	}
+
+	@Test
+	public void QCosts30()
+	{
+		assertEquals(30, solution.checkout("Q").intValue());
+	}
+
+	@Test
+	public void threeQsCost80()
+	{
+		assertEquals(200, solution.checkout("QQQ").intValue());
+	}
 }

@@ -1,5 +1,7 @@
 package befaster.solutions.CHK;
 
+import befaster.solutions.CHK.price.*;
+
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -8,6 +10,7 @@ public class CheckoutSolution
 {
     private List<Price> prices =
         Arrays.asList(
+            new PPrice(),
             new OPrice(), new NPrice(), new MPrice(), new LPrice(), new KPrice(),
             new JPrice(), new IPrice(), new HPrice(), new GPrice(), new FPrice(),
             new EPrice(), new DPrice(), new CPrice(), new BPrice(), new APrice());
